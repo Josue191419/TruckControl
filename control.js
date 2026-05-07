@@ -116,3 +116,7 @@ function generarPDF() {
 
     doc.save("reporte_tabla.pdf");
 }
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}

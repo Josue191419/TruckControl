@@ -67,23 +67,90 @@ h2 {
     text-align: center;
 }
 
-/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 12px;
+    }
 
     .formulario {
         grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 10px;
     }
 
-    input, button {
-        font-size: 16px;
+    input {
+        font-size: 15px;
         width: 100%;
     }
 
+    button {
+        font-size: 15px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .table-container {
+        padding: 5px;
+    }
+
     table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* 👇 CLAVE PARA QUE NO SE DEFORME */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    input, button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        padding: 5px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 900px; /* 👈 clave para que no se aplaste */
         font-size: 12px;
     }
 
     th, td {
         padding: 6px;
+        white-space: nowrap;
     }
 }
