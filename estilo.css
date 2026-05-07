@@ -165,8 +165,9 @@ button:hover {
 
 /* Tablas */
 .table-container {
-    overflow-x: auto;
-    margin-top: 20px;
+   
+   overflow-x: scroll;/* 👈 aquí se activa la barra */
+    padding: 5px;
 }
 
 table {
@@ -191,6 +192,7 @@ td {
 
 /* Responsivo */
 @media (max-width: 768px) {
+
     body {
         font-size: 14px;
     }
@@ -203,18 +205,35 @@ td {
     .formulario {
         grid-template-columns: 1fr;
         padding: 15px;
+        gap: 10px;
     }
 
     input, button {
         width: 100%;
+        font-size: 14px;
+    }
+
+    /* 📊 CLAVE: evita que la tabla se aplaste */
+    .table-container {
+        overflow-x: auto;
+        padding: 5px;
     }
 
     table {
         font-size: 13px;
+        min-width: 900px;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 6px;
     }
 }
 
+
+/* 📱 Teléfonos pequeños */
 @media (max-width: 480px) {
+
     h1 {
         font-size: 16px;
     }
@@ -223,8 +242,17 @@ td {
         font-size: 12px;
     }
 
+    input, button {
+        font-size: 13px;
+    }
+
     table {
         font-size: 11px;
+        min-width: 900px;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 5px;
     }
 }
-
