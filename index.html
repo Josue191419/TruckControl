@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Camiones</title>
+
+<link rel="stylesheet" href="estilo.css">
+<link rel="manifest" href="manifest.json">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+<h1>🚛 Control de Viajes</h1>
+
+<div class="formulario">
+
+<input type="date" id="fecha">
+<input type="text" id="chofer" placeholder="Chofer">
+<input type="text" id="viaje" placeholder="Destino">
+
+<input type="number" id="kmInicio" placeholder="KM inicio">
+<input type="number" id="kmFinal" placeholder="KM final">
+
+<input type="number" id="litros" placeholder="Litros">
+<input type="number" id="tanque" placeholder="Tanque lleno (₡)">
+<input type="number" id="combustible" placeholder="Combustible ₡">
+
+<input type="number" id="salario" placeholder="Salario chofer">
+<input type="number" id="otros" placeholder="Otros gastos">
+
+<button onclick="agregar()">Agregar</button>
+
+</div>
+
+<table>
+<thead>
+<tr>
+    <th>Fecha</th>
+    <th>Chofer</th>
+    <th>Viaje</th>
+    <th>KM</th>
+    <th>Litros</th>
+    <th>L/KM</th>
+    <th>Tanque</th>
+    <th>Combustible</th>
+    <th>Salario</th>
+    <th>Otros</th>
+    <th>Total</th>
+    <th>❌</th>
+</tr>
+</thead>
+
+<tbody id="tablaViajes"></tbody>
+</table>
+
+<tbody id="tablaViajes"></tbody>
+</table>
+
+<h2 id="total"></h2>
+
+<button onclick="generarPDF()">📄 Generar PDF</button>
+
+<script src="control.js"></script>
+
+</body>
+</html>

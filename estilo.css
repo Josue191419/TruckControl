@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    background: #f0f2f5;
+    margin: 0;
+}
+
+h1 {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* FORMULARIO */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 15px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* BOTONES */
+button {
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* TABLA */
+.table-container {
+    overflow-x: auto;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* TOTAL */
+h2 {
+    text-align: center;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    input, button {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
